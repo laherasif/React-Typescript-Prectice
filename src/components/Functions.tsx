@@ -28,22 +28,29 @@ const Functions = () => {
         return `${song}/${rating}`
     }
 
-    console.log(defaultSong("laher" , 12))
+    console.log(defaultSong("laher", 12))
 
     // Reset Paramenters
 
-    const RestParameter = (type:string , ...names:string[] ) => {
-       for(const song of names ){
-        console.log(`${song}, by ${type}`);
-       }
+    const RestParameter = (type: string, ...names: string[]) => {
+        for (const song of names) {
+            console.log(`${song}, by ${type}`);
+        }
     }
 
-     console.log(RestParameter("data" , "laher", "asif" , "new" , "helllw"))
+    console.log(RestParameter("data", "laher", "asif", "new", "helllw"))
 
 
-     
 
-    // function return type 
+
+    const checkCond = (type: string, index: number) => {
+        type === "laher" ?
+            index
+            : undefined
+    }
+
+
+    // function explicit return type 
 
     const add = (first: number | string, second: number | string): number | string => {
         if (typeof first === "number" && typeof second === "number") {
@@ -55,6 +62,25 @@ const Functions = () => {
     }
 
     //   console.log(add(30, 20))
+
+    // rturn undefinded value 
+    const addUndefine = (first: number | string, second: number | string): number | undefined => {
+        if (typeof first === "number" && typeof second === "number") {
+            return first + second
+        }
+        else {
+            return undefined
+        }
+    }
+
+    // Functions types 
+
+
+    let returnStringFunc : ()  => string
+
+    let withParameterFunc : (names:string[] , index : number ) => number
+
+
 
     return (
         <div style={{ fontSize: '2rem', marginTop: '2rem' }}>
