@@ -75,19 +75,45 @@ const Functions = () => {
 
     // Functions types 
 
+    let returnStringFunc: () => string
 
-    let returnStringFunc : ()  => string
+    let withParameterFunc: (names: string[], index: number) => number
 
-    let withParameterFunc : (names:string[] , index : number ) => number
+    withParameterFunc = (songs, i) => {
+        return 2
+    }
 
-
-       withParameterFunc = ( songs , i ) => {
-             return 2
-       }
-
-       returnStringFunc = () =>{
+    returnStringFunc = () => {
         return "my name is laher asif "
-       } 
+    }
+
+
+
+    //    function return using alies 
+
+    type var1 = (abc: number) => string
+
+    const myFunc = (var2: var1) => {
+        console.log(var2(1234))
+    }
+
+    myFunc((abc) => "laherasif")
+
+
+    // Overrides functions with litterlas
+
+    // const func1 = (name: string, address: string , nameData: "name" | "laher") => {
+    //     console.log(name + "" + address)
+    // }
+    // const func1 = (name: string, address: string, phone: number) => {
+    //     console.log(name + "" + address + "" + phone)
+
+    // }
+    // const func1 = (name: string, address: string, lastname: string, midname: string) => {
+    //     console.log(name + "" + address + "" + lastname + "" + midname)
+    // }
+
+    // func1("lahera" , "check no 67 j.b sadhar" , "name")
 
 
     return (
