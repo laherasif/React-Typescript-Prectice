@@ -44,7 +44,7 @@ const Functions = () => {
 
 
     const checkCond = (type: string, index: number) => {
-        type === "laher" ?
+        return type === "laher" ?
             index
             : undefined
     }
@@ -80,6 +80,14 @@ const Functions = () => {
 
     let withParameterFunc : (names:string[] , index : number ) => number
 
+
+       withParameterFunc = ( songs , i ) => {
+             return 2
+       }
+
+       returnStringFunc = () =>{
+        return "my name is laher asif "
+       } 
 
 
     return (
