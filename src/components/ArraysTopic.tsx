@@ -57,6 +57,12 @@ const ArrayTopic = () => {
     return a 
   }
   func(1, 2, 4, 5, 6, 7)
+
+
+  let funcTuple = () => {}
+
+
+
   return (
     <div>ArrayTopic</div>
   )
